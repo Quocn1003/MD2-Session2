@@ -1,15 +1,25 @@
-package ex4;
+package ex;
 
 import java.util.Scanner;
 
 public class ex4 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter edge lenght: ");
-        float edge = sc.nextFloat();
-        float perimeter = edge*4;
-        float area = edge*edge;
-        System.out.printf("Perimeter = %f\n",perimeter);
-        System.out.printf("Area = %f",area);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập vào số bắt đầu của khoảng: ");
+        int start = scanner.nextInt();
+        System.out.print("Nhập vào số kết thúc của khoảng: ");
+        int end = scanner.nextInt();
+
+        if (start > end) {
+            System.out.println("Số bắt đầu phải nhỏ hơn hoặc bằng số kết thúc.");
+        } else {
+            int sum = 0;
+            for (int i = start; i <= end; i++) {
+                if (i % 2 == 0) {
+                    sum += i;
+                }
+            }
+            System.out.printf("Tổng các số chẵn trong khoảng từ %d đến %d là: %d",start,end,sum);
+        }
     }
 }

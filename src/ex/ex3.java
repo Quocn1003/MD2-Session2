@@ -1,15 +1,12 @@
-package ex3;
+package ex;
 
-import java.util.Scanner;
-
-public class Main {
+public class ex3 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter edge lenght: ");
-        float edge = sc.nextFloat();
-        float perimeter = edge*4;
-        float area = edge*edge;
-        System.out.printf("Perimeter = %f\n",perimeter);
-        System.out.printf("Area = %f",area);
+        System.out.println("Các số chia hết cho cả 3 và 5 trong khoảng từ 1 đến 100 là:");
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print(i+" ");
+            }
+        }
     }
 }
